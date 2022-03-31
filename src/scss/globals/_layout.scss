@@ -1,0 +1,96 @@
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../images/background.jpg"),
+    linear-gradient(rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.67));
+  background-blend-mode: overlay;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  font-size: xx-large;
+  text-transform: capitalize;
+
+  &__instruction {
+    cursor: pointer;
+  }
+}
+
+.cards-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+
+  font-size: 5rem;
+  color: black;
+  perspective: 1500px;
+}
+
+.thief-message {
+  align-self: center;
+  margin-bottom: 20px;
+  font-size: xx-large;
+  text-transform: capitalize;
+  color: yellow;
+}
+
+.players {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+  text-transform: capitalize;
+
+  .player-1,
+  .player-2 {
+    border: 5px solid transparent;
+    border-radius: 5%;
+    padding: 40px;
+    transition: border 0.3s ease-in-out 0s;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    span {
+      font-size: 3.5rem;
+    }
+  }
+  .active {
+    border: 5px solid #754b3b;
+  }
+
+  .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    text-transform: capitalize;
+    background-color: #754b3b;
+    border-radius: 50%;
+    height: 7rem;
+    width: 7rem;
+    color: inherit;
+    border: 0.4rem solid white;
+    transition: 0.2s ease-in-out 0s;
+  }
+
+  .btn:hover {
+    height: 8rem;
+    width: 8rem;
+    background-color: rgb(248, 21, 21);
+    cursor: pointer;
+  }
+}

@@ -22,7 +22,25 @@
 // .cursor-p {
 //   cursor: pointer;
 // }
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .hidden {
   display: none;
+}
+
+.disable{
+  pointer-events: none;
+}
+
+.padding-x {
+  padding: 0 14%;
+}
+
+.isflip {
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
 }

@@ -1,0 +1,37 @@
+.card {
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  position: relative;
+  cursor: pointer;
+
+  .card-front,
+  .card-back {
+    height: 300px;
+    width: 250px;
+    line-height: 300px;
+    color: #03446a;
+    text-align: center;
+    border-radius: 15px;
+    font-size: larger;
+    backface-visibility: hidden;
+  }
+
+  .card-front {
+    background: #ffffff;
+    border: 7px double rgb(62, 62, 62);
+  }
+
+  .card-back {
+    background: #03446a;
+    color: white;
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+  }
+
+  .thief {
+    background: url("../images/thief.jpg") center center no-repeat;
+    background-size: contain;
+    color: #754b3b00;
+  }
+}

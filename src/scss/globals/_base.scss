@@ -18,11 +18,10 @@ html {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  font-family: var(--font-kalam);
-  font-size: f.rem(18);
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--lightgray);
+  font-family: var(--font-true_crimesregular);
+  color: var(--white);
+
+  overflow: hidden;
 }
 
 /* Make images easier to work with */

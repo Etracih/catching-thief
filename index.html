@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="src/scss/main.scss" />
   </head>
   <body>
-    <main>
+    <main class="padding-x">
       <div class="modal hidden">
         <button class="close-modal">&times;</button>
         <h1></h1>
@@ -31,19 +31,19 @@
         <h2></h2>
       </div>
       <div class="overlay hidden"></div>
-      <section class="header padding-x">
+      <section class="header">
         <p class="header__instruction">instruction</p>
         <p class="header__highscore">highscore : <span></span></p>
       </section>
-      <section class="thief_message"><h1>catch the thief !</h1></section>
-      <section class="cards_container"></section>
+      <section class="thief-message"><h1>catch the thief !</h1></section>
+      <section class="cards-container"></section>
 
-      <section class="players padding-x">
-        <div class="player--1">
+      <section class="players">
+        <div class="player-1">
           <h1>player 1</h1>
           <span class="current_score--0"></span>
         </div>
-        <div class="player--2">
+        <div class="player-2">
           <h1>player 2</h1>
           <span class="current_score--1"></span>
         </div>
@@ -51,6 +51,6 @@
         <button class="btn">start</button>
       </section>
     </main>
-    <script src="src/js/script.js"></script>
+    <script src="src/js/app.js"></script>
   </body>
 </html>

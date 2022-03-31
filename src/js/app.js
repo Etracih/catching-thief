@@ -1,20 +1,22 @@
 // Selecting elements
-const instructionEl = document.querySelector(".instruction");
+const instructionEl = document.querySelector(".header__instruction");
 const modalInstructionEl = document.querySelector(".modal-instruction");
-const btnCloseInstructionModalEl = document.querySelector(".close-instruction-modal");
+const btnCloseInstructionModalEl = document.querySelector(
+  ".close-instruction-modal"
+);
 const modalResultEl = document.querySelector(".modal");
 const modalTossEl = document.querySelector(".modal-toss");
 const overlayEl = document.querySelector(".overlay");
 
 const btnCloseTossModalEl = document.querySelector(".close-toss-modal");
 const btnCloseModalResultEl = document.querySelector(".close-modal");
-const cardsContainer = document.querySelector(".cards_container");
+const cardsContainer = document.querySelector(".cards-container");
 const btnStart = document.querySelector(".btn");
-const playerOne = document.querySelector(".player--1");
-const playerTwo = document.querySelector(".player--2");
+const playerOne = document.querySelector(".player-1");
+const playerTwo = document.querySelector(".player-2");
 
-let highscoreEl = document.querySelector(".highscore");
-let thiefMessage = document.querySelector(".thief_message");
+let highscoreEl = document.querySelector(".header__highscore");
+let thiefMessage = document.querySelector(".thief-message");
 let playerOneScore = document.querySelector(".current_score--0");
 let playerTwoScore = document.querySelector(".current_score--1");
 
@@ -57,7 +59,7 @@ function initVariables() {
   playerOneScore.textContent = playerScore[0];
   playerTwoScore.textContent = playerScore[1];
   hasOneplayer = false;
-  // Initial value of thief_message
+  // Initial value of thief-message
   thiefMessage.firstChild.textContent = `Catch the thief!`;
   // Remove active player
   playerOne.classList.remove("active");
