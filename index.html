@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/scss/main.scss" />
+  </head>
+  <body>
+    <main>
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h1></h1>
+        <h2></h2>
+      </div>
+      <div class="modal-instruction hidden">
+        <button class="close-instruction-modal">&times;</button>
+        <h1>Instruction</h1>
+        <br />
+        <ul style="text-align: justify">
+          <li>Click Start to know who goes first</li>
+          <li>Find the Thief by clicking the card</li>
+          <li>Everytime Player gets the wrong card score will be Decreases</li>
+          <li>Player who first find the thief win the Game</li>
+        </ul>
+      </div>
+      <div class="modal-toss hidden">
+        <button class="close-toss-modal">&times;</button>
+        <h1></h1>
+        <h2></h2>
+      </div>
+      <div class="overlay hidden"></div>
+      <section class="header padding-x">
+        <p class="header__instruction">instruction</p>
+        <p class="header__highscore">highscore : <span></span></p>
+      </section>
+      <section class="thief_message"><h1>catch the thief !</h1></section>
+      <section class="cards_container"></section>
+
+      <section class="players padding-x">
+        <div class="player--1">
+          <h1>player 1</h1>
+          <span class="current_score--0"></span>
+        </div>
+        <div class="player--2">
+          <h1>player 2</h1>
+          <span class="current_score--1"></span>
+        </div>
+
+        <button class="btn">start</button>
+      </section>
+    </main>
+    <script src="src/js/script.js"></script>
+  </body>
+</html>

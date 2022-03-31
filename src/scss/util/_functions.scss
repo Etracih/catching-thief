@@ -1,0 +1,13 @@
+@use "sass:math";
+
+// Convert px to rem
+//
+// @param $size  - the value of px you want to convert
+//
+// 16            - default px value to get 1 rem
+//
+// e.g           - span { font-size : rem(20px); }
+
+@function rem($size) {
+  @return math.div($size, 16) * 1rem;
+}
