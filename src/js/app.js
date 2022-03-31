@@ -4,12 +4,12 @@ const modalInstructionEl = document.querySelector(".modal-instruction");
 const btnCloseInstructionModalEl = document.querySelector(
   ".close-instruction-modal"
 );
-const modalResultEl = document.querySelector(".modal");
+const modalResultEl = document.querySelector(".modal-result");
 const modalTossEl = document.querySelector(".modal-toss");
 const overlayEl = document.querySelector(".overlay");
 
 const btnCloseTossModalEl = document.querySelector(".close-toss-modal");
-const btnCloseModalResultEl = document.querySelector(".close-modal");
+const btnCloseModalResultEl = document.querySelector(".close-modal-result");
 const cardsContainer = document.querySelector(".cards-container");
 const btnStart = document.querySelector(".btn");
 const playerOne = document.querySelector(".player-1");
