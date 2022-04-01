@@ -21,7 +21,7 @@ body {
   font-family: var(--font-true_crimesregular);
   color: var(--white);
 
-  overflow: hidden;
+ /*  overflow: hidden; */
 }
 
 /* Make images easier to work with */
@@ -46,6 +46,3 @@ a:active {
   text-decoration: none;
 }
 
-ul li {
-  list-style-type: none;
-}

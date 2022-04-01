@@ -221,8 +221,8 @@ function addCardFunctionality() {
         setTimeout(() => {
           cardsContainer.classList.remove("disable");
           changeCardNumber(randomNumber);
-        }, 750);
-      }, 700);
+        }, 1050);
+      }, 1000);
       // Add element to array Players
       addPlayer();
     });

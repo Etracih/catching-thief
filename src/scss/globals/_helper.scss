@@ -1,4 +1,6 @@
-// // Flexbox
+@use "../util/breakpoints" as *;
+
+// Flexbox
 .flex {
   display: flex;
 
@@ -33,6 +35,10 @@
 
 .padding-x {
   padding: 0 14%;
+
+  @include breakpoint-down("small") {
+    padding: 0 5%;
+  }
 }
 
 .isflip {

@@ -1,3 +1,6 @@
+@use "../util/functions" as func;
+@use "../util/breakpoints" as *;
+
 main {
   min-height: 100vh;
   flex-direction: column;
@@ -10,57 +13,85 @@ main {
 }
 
 .header {
-  margin: 15px 0;
+  margin: func.rem(15) 0;
   font-size: xx-large;
   text-transform: capitalize;
 
   &__instruction {
     cursor: pointer;
+
+    @include breakpoint-down("small") {
+      font-size: 1.2rem;
+    }
+  }
+  &__highscore {
+    @include breakpoint-down("small") {
+      font-size: 1.2rem;
+    }
   }
 }
 
 .cards-container {
   flex: 1;
-  column-gap: 30px;
+  column-gap: func.rem(30);
 
   font-size: 5rem;
   color: black;
-  perspective: 1500px;
+  perspective: func.rem(1500);
 }
 
 .thief-message {
   align-self: center;
-  margin-bottom: 20px;
+  margin-bottom: func.rem(20);
   font-size: xx-large;
   text-transform: capitalize;
   color: yellow;
+
+  @include breakpoint-down("medium") {
+    font-size: x-large;
+  }
+  @include breakpoint-down("small") {
+    font-size: large;
+  }
 }
 
 .players {
   flex: 1;
   position: relative;
-  margin-top: 20px;
+  margin-top: func.rem(20);
 
   text-align: center;
   text-transform: capitalize;
 
+  @include breakpoint-down("small") {
+    flex: unset;
+  }
+
   .player-1,
   .player-2 {
-    border: 5px solid transparent;
+    border: func.rem(5) solid transparent;
     border-radius: 5%;
-    padding: 40px;
+    padding: func.rem(40);
     transition: border 0.3s ease-in-out 0s;
 
     h1 {
       font-size: 2.5rem;
-      margin-bottom: 10px;
+      margin-bottom: func.rem(10);
+
+      @include breakpoint-down("small") {
+        font-size: 1.5rem;
+      }
     }
     span {
       font-size: 3.5rem;
+
+      @include breakpoint-down("small") {
+        font-size: 1.5rem;
+      }
     }
   }
   .active {
-    border: 5px solid #754b3b;
+    border: func.rem(5) solid #754b3b;
   }
 
   .btn {
@@ -77,6 +108,13 @@ main {
     color: inherit;
     border: 0.4rem solid white;
     transition: 0.2s ease-in-out 0s;
+
+    @include breakpoint-down("small") {
+      height: 4rem;
+      width: 4rem;
+      font-size: 1rem;
+      border: 0.3rem solid white;
+    }
   }
 
   .btn:hover {

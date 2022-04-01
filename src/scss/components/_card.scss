@@ -1,3 +1,18 @@
+@use "../util/functions" as func;
+@use "../util/breakpoints" as *;
+
+.cards-container {
+  @include breakpoint-down("medium") {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  @include breakpoint-down("small") {
+    gap: 1rem;
+    flex: unset;
+  }
+}
+
 .card {
   transition: transform 1s;
   transform-style: preserve-3d;
@@ -6,19 +21,26 @@
 
   .card-front,
   .card-back {
-    height: 300px;
-    width: 250px;
-    line-height: 300px;
+    height: func.rem(300);
+    width: func.rem(250);
+    line-height: func.rem(300);
     color: #03446a;
     text-align: center;
-    border-radius: 15px;
+    border-radius: func.rem(15);
     font-size: larger;
     backface-visibility: hidden;
+
+    @include breakpoint-down("medium") {
+      height: func.rem(180);
+      width: func.rem(120);
+
+      font-size: func.rem(60);
+    }
   }
 
   .card-front {
     background: #ffffff;
-    border: 7px double rgb(62, 62, 62);
+    border: func.rem(7) double rgb(62, 62, 62);
   }
 
   .card-back {
