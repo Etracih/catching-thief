@@ -30,6 +30,7 @@ let cardNumber;
 let highscore = 0;
 let hasOneplayer;
 
+// Call to Action
 btnCloseTossModalEl.addEventListener("click", closeTossModal);
 btnCloseModalResultEl.addEventListener("click", closeModal);
 instructionEl.addEventListener("click", openModalInstruction);
@@ -61,13 +62,13 @@ function initVariables() {
   hasOneplayer = false;
   // Initial value of thief-message
   thiefMessage.firstChild.textContent = `Catch the thief!`;
-  // Remove active player
+  // Remove active players
   playerOne.classList.remove("active");
   playerTwo.classList.remove("active");
-
+  //Disable Cards
   cardsContainer.classList.add("disable");
   btnStart.classList.remove("hidden");
-
+  // Setting Value for Highscore
   highscoreEl.lastChild.textContent = highscore;
 }
 
@@ -77,13 +78,13 @@ function initElement(cards = genarateCards()) {
     randomNumberEl = document.createTextNode(cards[i]);
     cardBackEl.appendChild(randomNumberEl);
     cardBackEl.classList.add("card-back");
-    cardBackEl.classList.add("flex");
+    cardBackEl.classList.add("flex-c-all");
 
     cardFrontEl = document.createElement("div");
     testText = document.createTextNode("?");
     cardFrontEl.appendChild(testText);
     cardFrontEl.classList.add("card-front");
-    cardFrontEl.classList.add("flex");
+    cardFrontEl.classList.add("flex-c-all");
 
     cardCon = document.createElement("div");
     cardCon.classList.add("card");
@@ -96,6 +97,7 @@ function initElement(cards = genarateCards()) {
 }
 
 function genarateCards() {
+  // Thief Card Number
   thiefCard = getRandomNumber(0, 4);
   for (let i = 0; i < randomNumber.length; i++) {
     randomNumber[i] = i === thiefCard ? 0 : getRandomNumber(1, 20);
@@ -169,11 +171,8 @@ function switchPlayer() {
 function addPlayer() {
   let hasPlayer = Players.includes(activePlayer, 0);
   if (!hasPlayer) {
-    console.log(`${activePlayer + 1} added`);
-
     Players.push(activePlayer);
   }
-  console.log(Players);
 }
 
 function displayActivePlayer() {
@@ -210,8 +209,7 @@ function addCardFunctionality() {
       toggleThiefImage(cardNumber, card);
       cardsContainer.classList.add("disable");
 
-      console.log(randomNumber);
-      // Display card on 7 milisecond
+      // Display card within 7 milisecond
       setTimeout(() => {
         checkCardNumber(cardNumber);
 
@@ -223,7 +221,6 @@ function addCardFunctionality() {
         setTimeout(() => {
           cardsContainer.classList.remove("disable");
           changeCardNumber(randomNumber);
-          console.log(randomNumber);
         }, 750);
       }, 700);
       // Add element to array Players

@@ -1,38 +1,33 @@
 // // Flexbox
-// .flex {
-//   display: flex;
-
-//   &-jc-sb {
-//     justify-content: space-between;
-//   }
-
-//   &-jc-c {
-//     justify-content: center;
-//   }
-
-//   &-ai-c {
-//     align-items: center;
-//   }
-// }
-// .flex-c-all {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-// .cursor-p {
-//   cursor: pointer;
-// }
 .flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+.flex-c-all {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.cursor-p {
+  cursor: pointer;
 }
 
 .hidden {
   display: none;
 }
 
-.disable{
+.disable {
   pointer-events: none;
 }
 

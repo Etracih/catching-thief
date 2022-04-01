@@ -1,6 +1,5 @@
 main {
   min-height: 100vh;
-  display: flex;
   flex-direction: column;
 
   background-size: cover;
@@ -11,8 +10,6 @@ main {
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
   margin: 15px 0;
   font-size: xx-large;
   text-transform: capitalize;
@@ -24,9 +21,6 @@ main {
 
 .cards-container {
   flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   column-gap: 30px;
 
   font-size: 5rem;
@@ -44,11 +38,9 @@ main {
 
 .players {
   flex: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   position: relative;
   margin-top: 20px;
+
   text-align: center;
   text-transform: capitalize;
 

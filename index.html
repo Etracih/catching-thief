@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="src/scss/main.scss" />
   </head>
   <body>
-    <main class="padding-x">
+    <main class="flex padding-x">
       <div class="modal-result hidden">
         <button class="close-modal-result">&times;</button>
         <h1></h1>
@@ -31,14 +31,14 @@
         <h2></h2>
       </div>
       <div class="overlay hidden"></div>
-      <section class="header">
+      <section class="header flex flex-jc-sb flex-ai-c">
         <p class="header__instruction">instruction</p>
         <p class="header__highscore">highscore : <span></span></p>
       </section>
       <section class="thief-message"><h1>catch the thief !</h1></section>
-      <section class="cards-container"></section>
+      <section class="cards-container flex-c-all"></section>
 
-      <section class="players">
+      <section class="players flex flex-jc-sb flex-ai-c">
         <div class="player-1">
           <h1>player 1</h1>
           <span class="current_score--0"></span>
